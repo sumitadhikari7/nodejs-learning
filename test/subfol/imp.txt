@@ -1,0 +1,17 @@
+//npm - global command that comes with node
+//nom --v = checks the version
+
+//local dependency = use it only in this paticular project
+//npm i <packagename> = installs locally
+
+//global dependemcy - use it in any project
+//npm install -g <packagename> = install globally
+
+//package.json - stores important info about project/package
+//npm init (step by step, press enter to skip)
+// npm init -y (everything byy default)
+
+//npm i nodemon -D = everytime we save the file, the app restarts automatically
+
+//npm init is the first command
+

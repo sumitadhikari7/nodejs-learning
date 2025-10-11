@@ -12,11 +12,11 @@ const getText=(path)=>{
 })
     })
 }
-// getText('./test/subfol/first.txt')
-// // if the file is read successfully,
-// .then((result) => console.log(result))
-// //if there is an error
-// .catch((err) => console.log(err));
+getText('./test/subfol/first.txt')
+// if the file is read successfully,
+.then((result) => console.log(result))
+//if there is an error
+.catch((err) => console.log(err));
 
 
 const start = async()=>{
