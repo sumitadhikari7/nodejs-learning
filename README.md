@@ -4,7 +4,7 @@ This repository documents my journey learning Node.js through a comprehensive co
 
 ## Topics Covered So Far
 
-### Previous Topics
+### Day 1
 
 - Introduction to Node.js
 - Environment setup and installation
@@ -16,7 +16,7 @@ This repository documents my journey learning Node.js through a comprehensive co
 - Path module
 - File System (FS) module — synchronous and asynchronous methods
 
-## Today's Progress
+### Day 2
 
 - Sync vs Async Concepts
 - Introduction to HTTP
@@ -35,5 +35,19 @@ This repository documents my journey learning Node.js through a comprehensive co
 - Evenr loop slides review
 - Evenr loop coding examples
 - Async patterns - blocking code, setting up promises, refractoring to async
+
+### Day 3
+
+- EventEmitter with code examples
+- Emitting and listening to custom events
+- Chaining multiple event listeners
+- Practical use of EventEmitter with HTTP module
+- Introduction to Streams in Node.js
+- Reading files using fs.createReadStream()
+- Understanding highWaterMark for stream buffer size
+- Encoding streams (utf8) for readable output
+- Listening to stream events 'data' 'end' 'error'
+  -Streaming file data into HTTP responses
+- Installing express as a project dependency
 
 This repo will be continuously updated as I progress through the full course.

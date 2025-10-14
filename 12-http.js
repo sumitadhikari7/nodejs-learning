@@ -11,3 +11,4 @@ const server = http.createServer((req,res)=>{
         <a href="/">Back home</a>`)
 })
 server.listen(5000)
+//mathi const server= bhako vayera yeta server. bhako natra .listen matra
