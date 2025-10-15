@@ -50,4 +50,35 @@ This repository documents my journey learning Node.js through a comprehensive co
   -Streaming file data into HTTP responses
 - Installing express as a project dependency
 
+### Day 4
+
+- **HTTP Basics**
+  - Understanding Request and Response cycle
+  - Setting response headers using `res.writeHead()`
+- **HTTP Headers**
+  - Content-Type: `text/html`, `application/json`, etc.
+  - Status codes: 200 OK, 404 Not Found
+- **Request Object**
+  - `req.url`, `req.method` and their usage
+- **Serving HTML files**
+  - Reading and sending HTML using `fs.readFileSync()`
+- **HTTP App Example**
+  - Basic routing using native `http` module
+  - Sending different responses for `/`, `/about`, etc.
+- **Express Overview**
+  - What is Express and why it simplifies HTTP handling
+- **Express Basics**
+  - Creating routes using `app.get()` and `app.all()`
+  - Using `res.send()` and `res.json()`
+- **Building Express App**
+  - Serving static files using `express.static()`
+  - Folder structure for routes and public files
+- **API vs SSR**
+  - Difference between sending JSON vs rendering HTML
+  - Use cases of API (React/SPA) vs SSR (template engines like EJS)
+- **JSON Basics**
+  - What is JSON and how it's used in APIs
+  - Creating and serving static JSON data using Express
+  - Creating a `data.js` module for products and people
+
 This repo will be continuously updated as I progress through the full course.

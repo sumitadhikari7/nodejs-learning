@@ -1,6 +1,11 @@
-const http = require('http')
-const server=http.createServer((req,res)=>{
-    console.log('User is in the server')
-    res.end('Welcomeeeeee')
+const express=require('express');
+const app=express();
+const {products}= require('./data')
+//importing products from data.js
+
+app.get('/',(req,res)=>{
+    res.json(products)
 })
-server.listen(5000)
+app.listen(5000,()=>{
+    console.log('Server is listening to port 5000')
+})
