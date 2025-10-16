@@ -1,24 +1,24 @@
 const fs = require('fs');
 
-// console.log('start');
+console.log('start');
 
-// const read = fs.readFile('./test/subfol/first.txt', 'utf8', (error, result) => {
-//     if (error) {
-//         console.log('Error reading file:', error);
-//         return;
-//     }
+const read = fs.readFile('./test/subfol/first.txt', 'utf8', (error, result) => {
+    if (error) {
+        console.log('Error reading file:', error);
+        return;
+    }
 
-//     console.log('File content:', result);
+    console.log('File content:', result);
 
-//     // Now that we have result, we can write the file
-//     const write = fs.writeFile('./test/subfol/res.txt', `Here is the result: ${result}`, (err) => {
-//         if (err) {
-//             console.log('Error writing file:', err);
-//             return;
-//         }
-//         console.log('res.txt written successfully');
-//     });
-// });
+    // Now that we have result, we can write the file
+    const write = fs.writeFile('./test/subfol/res.txt', `Here is the result: ${result}`, (err) => {
+        if (err) {
+            console.log('Error writing file:', err);
+            return;
+        }
+        console.log('res.txt written successfully');
+    });
+});
 
 
 

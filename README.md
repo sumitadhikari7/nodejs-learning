@@ -81,4 +81,34 @@ This repository documents my journey learning Node.js through a comprehensive co
   - Creating and serving static JSON data using Express
   - Creating a `data.js` module for products and people
 
+### Day 5
+
+- **Express Route Parameters**
+
+  - Defining dynamic routes using \`:paramName\`
+  - Accessing route params with \`req.params\`
+  - Using route params for fetching single items (e.g., \`/api/products/:productId\`)
+
+- **Advanced Route Params**
+
+  - Nested route parameters (e.g., \`/api/products/:productId/reviews/:reviewId\`)
+  - Extracting and using multiple params
+
+- **Express Query Strings**
+
+  - Accessing query strings using \`req.query\`
+  - Filtering and slicing arrays using query values (\`search\`, \`limit\`, etc.)
+  - Returning modified results based on queries
+
+- **Middleware Setup**
+
+  - Creating custom middleware functions
+  - Using \`next()\` to move through middleware chains
+  - Logging request method, URL, and timestamp
+
+- **app.use() Explained**
+  - Applying middleware globally using \`app.use(logger)\`
+  - Applying middleware to specific route groups (e.g., \`app.use('/api', logger)\`)
+  - Difference between route-specific middleware and global middleware
+
 This repo will be continuously updated as I progress through the full course.
