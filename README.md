@@ -111,4 +111,30 @@ This repository documents my journey learning Node.js through a comprehensive co
   - Applying middleware to specific route groups (e.g., \`app.use('/api', logger)\`)
   - Difference between route-specific middleware and global middleware
 
+### Day 6
+
+- **Multiple Middleware Functions**
+  - Using multiple middleware for the same route
+  - Chaining custom middlewares in Express
+- **Additional Middleware Info**
+  - Middleware ordering and execution flow
+  - How `next()` controls middleware chain
+- **Methods - GET**
+  - Handling GET requests in Express
+  - Sending JSON and HTML responses
+- **Methods - POST**
+  - Handling POST requests
+  - Sending and receiving JSON data
+- **Methods - POST (Form Example)**
+  - Using `express.urlencoded()` for HTML form data
+- **Methods - POST (JavaScript Example)**
+  - Using `fetch` or Axios to send POST requests from frontend
+- **Install Postman**
+  - Using Postman to test API endpoints
+  - Sending GET, POST, PUT requests
+- **Methods - PUT**
+  - Updating resources using PUT
+  - Accessing `req.params` and `req.body`
+  - Updating arrays immutably or in-place
+
 This repo will be continuously updated as I progress through the full course.

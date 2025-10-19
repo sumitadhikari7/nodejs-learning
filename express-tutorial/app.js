@@ -1,22 +1,54 @@
 const express = require('express')
 const app = express()
-const logger = require('./logger')
 
-// app.use('/api', logger) //Only to routes that begin with /api
-app.use(logger)
+let{people} = require('./data')
 
-app.get('/',(req,res)=>{
-    res.send('Home')
+//static assets
+app.use(express.static('./methods-public'))
+
+app.use(express.urlencoded({extended:false})) //Gives you req.body in your POST routes
+//without this. req.body wouldn't work
+app.use(express.json()); //Without it, req.body will be undefined for JSON posts (like Axios requests).
+
+app.get('/api/people',(req,res)=>{
+    res.status(200).json({success:true, data:people});
 })
-app.get('/about',(req,res)=>{
-    res.send('About')
+app.post('/api/people',(req,res)=>{
+    const {name} = req.body;
+    if(!name){
+        return res.status(400).json({success:false,msg:'Please provide name value'})
+    }
+    res.status(201).send({success:true,person:name})
 })
-app.get('/api/products',(req,res)=>{
-    res.send('Products')
+app.post('/api/postman/people',(req,res)=>{
+    const {name} = req.body
+    if(!name){
+        return res.status(400).json({success: false, msg:'Please provide name value'})
+    }
+    res.status(201).send({success:true, data:[...people, name]})
 })
-app.get('/api/items',(req,res)=>{
-    res.send('Items')
+app.post('/login',(req,res)=>{
+    const {name} = req.body
+    if(name){
+        return res.status(200).send(`Welcome ${name}`)
+    }
+    res.status(401).send('Please Provide Credentials')
 })
+app.put('/api/people/:id', (req,res)=>{
+    const {id} = req.params //url ma bhako bhayera .params
+    const {name} = req.body //contains data sent by client
+    const person = people.find((person)=> 
+        person.id === Number(id))
+
+    if(!person){
+        return res.status(400).json({success:false, msg:`No person with id ${id}`})
+    }
+    const newPeople = people.map((person)=>{
+        if(person.id === Number(id)){
+            person.name = name
+        }
+    })
+})  
 
 app.listen(5000,()=>{
     console.log('Server is listening to port 5000')
