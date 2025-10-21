@@ -137,4 +137,23 @@ This repository documents my journey learning Node.js through a comprehensive co
   - Accessing `req.params` and `req.body`
   - Updating arrays immutably or in-place
 
-This repo will be continuously updated as I progress through the full course.
+### Day 7
+
+- **Methods - PUT**
+- Updating resources using PUT
+- Accessing `req.params` and `req.body`
+- Updating arrays immutably or in-place
+- **Methods - DELETE**
+  - Removing resources using DELETE
+  - Accessing route parameters for deletion
+  - Returning updated array after deletion
+- **Express Router - Setup**
+  - Using `express.Router()`
+  - Creating modular routes
+  - Mounting routers in main app using `app.use()`
+- **Express Router - Controllers**
+  - Separating route logic into controller functions
+  - Using router methods with `.route()` for cleaner code
+  - Connecting controller functions to routes for CRUD operations
+
+This repository now contains my complete Node.js course with practical examples.
